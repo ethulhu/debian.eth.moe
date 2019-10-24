@@ -1,0 +1,14 @@
+server {
+        server_name debian.eth.moe;
+        include snippets/server.http-to-https.conf;                                           
+}
+server {
+        server_name debian.eth.moe;
+        include snippets/server.https-static.conf;                                            
+        ssl_certificate /etc/letsencrypt/live/debian.eth.moe/fullchain.pem;                   
+        ssl_certificate_key /etc/letsencrypt/live/debian.eth.moe/privkey.pem;                 
+
+	location /debian {
+		autoindex on;
+	}
+}
