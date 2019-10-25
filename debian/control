@@ -1,0 +1,10 @@
+Source: website-debian-eth-moe
+Package: website-debian-eth-moe
+Section: web
+Priority: optional
+Architecture: all
+Build-Depends:
+Depends: eth-nginx
+Essential: no
+Maintainer: Eth Morgan <eth@ethulhu.co.uk>
+Description: The website https://debian.eth.moe.
