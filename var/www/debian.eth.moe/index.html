@@ -38,11 +38,15 @@ code .pipe {
 			<pre><code>
 <span class='prompt'>$</span> <span class='copyable'><span class='command'>curl</span> <span class='argument'>https://debian.eth.moe/public-key</span> <span class='pipe'>|</span> <span class='sudo'>sudo</span> <span class='command'>tee</span> <span class=argument>/etc/apt/trusted.gpg.d/debian-eth-moe.asc</span></span>
 			</code></pre>
+			or
+			<pre><code>
+<span class='prompt'>$</span> <span class='copyable'><span class='command'>wget</span> <span class='argument'>-qO-</span> <span class='argument'>https://debian.eth.moe/public-key</span> <span class='pipe'>|</span> <span class='sudo'>sudo</span> <span class='command'>tee</span> <span class=argument>/etc/apt/trusted.gpg.d/debian-eth-moe.asc</span></span>
+			</code></pre>
 		</li>
 		<li>add this repo to your APT sources.
 			<pre><code>
 <span class='prompt'>$</span> <span class='command'>cat</span> <span class='copyable'><span class='argument'>/etc/apt/sources.list.d/debian-eth-moe.sources</span></span>
-<span class='copyable'><span class='text'>Architectures: amd64
+<span class='copyable'><span class='text'>Architectures: all amd64 armhf
 Components: main
 Signed-By: /etc/apt/trusted.gpg.d/debian-eth-moe.asc
 Suites: buster
